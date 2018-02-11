@@ -1,0 +1,1 @@
+cmd_/tmp/compile/booker.oronde/user_mods/simple_module.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /tmp/compile/booker.oronde/user_mods/simple_module.ko /tmp/compile/booker.oronde/user_mods/simple_module.o /tmp/compile/booker.oronde/user_mods/simple_module.mod.o

@@ -1,0 +1,1 @@
+cmd_/tmp/compile/booker.oronde/user_mods/jiffies_module.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /tmp/compile/booker.oronde/user_mods/jiffies_module.ko /tmp/compile/booker.oronde/user_mods/jiffies_module.o /tmp/compile/booker.oronde/user_mods/jiffies_module.mod.o
