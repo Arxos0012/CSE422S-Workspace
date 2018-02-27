@@ -1,0 +1,1 @@
+cmd_/tmp/compile/booker.oronde/user_mods/kobject-example.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /tmp/compile/booker.oronde/user_mods/kobject-example.ko /tmp/compile/booker.oronde/user_mods/kobject-example.o /tmp/compile/booker.oronde/user_mods/kobject-example.mod.o
