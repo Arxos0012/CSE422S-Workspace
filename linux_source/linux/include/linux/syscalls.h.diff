@@ -1,0 +1,10 @@
+--- syscalls.h	2018-03-04 20:14:04.901391562 -0600
++++ syscalls.h.03042018	2018-03-04 20:11:44.645642500 -0600
+@@ -889,7 +889,4 @@ asmlinkage long sys_membarrier(int cmd,
+ 
+ asmlinkage long sys_mlock2(unsigned long start, size_t len, int flags);
+ 
+-asmlinkage long sys_noargs(void);
+-asmlinkage long sys_onearg(int val);
+-
+ #endif

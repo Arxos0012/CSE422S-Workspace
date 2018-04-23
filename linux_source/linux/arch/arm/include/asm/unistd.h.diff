@@ -1,0 +1,11 @@
+--- unistd.h	2018-03-04 22:09:26.061288121 -0600
++++ unistd.h.03042018	2018-03-04 22:09:09.672382399 -0600
+@@ -19,7 +19,7 @@
+  * This may need to be greater than __NR_last_syscall+1 in order to
+  * account for the padding in the syscall table
+  */
+-#define __NR_syscalls  (396)
++#define __NR_syscalls  (392)
+ 
+ #define __ARCH_WANT_STAT64
+ #define __ARCH_WANT_SYS_GETHOSTNAME

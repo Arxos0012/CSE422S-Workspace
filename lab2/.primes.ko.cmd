@@ -1,0 +1,1 @@
+cmd_/tmp/compile/booker.oronde/lab2/primes.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /tmp/compile/booker.oronde/lab2/primes.ko /tmp/compile/booker.oronde/lab2/primes.o /tmp/compile/booker.oronde/lab2/primes.mod.o

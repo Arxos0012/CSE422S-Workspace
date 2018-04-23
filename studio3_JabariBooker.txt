@@ -1,0 +1,34 @@
+1.	Jabari Booker
+-------------------------------------------------------------------------------------
+2.	Current User ID: 1893600
+	Error: setuid failed! Reason: Operation not permitted
+	New User ID: 1893600
+-------------------------------------------------------------------------------------
+3.	Current User ID: 1000
+	Error: setuid failed! Reason: Operation not permitted
+	New User ID: 1000
+	
+	The only difference between the two that I noticed was the difference in user id
+-------------------------------------------------------------------------------------
+5.	asmlinkage long sys_noargs(void);
+	asmlinkage long sys_onearg(int val);
+-------------------------------------------------------------------------------------
+6.	SYSCALL_DEFINE1( onearg, int, val ){
+
+	  printk("Someone invoked the sys_onearg system call with value: %d", new_num);
+	    return 0;  
+	    }
+-------------------------------------------------------------------------------------
+7.	sys_noargs.o sys_onearg.o
+-------------------------------------------------------------------------------------
+8.	In unistd.h:	#define __NR_noargs				(__NR_SYSCALL_BASE+391)
+	   								#define __NR_onearg				(__NR_SYSCALL_BASE+392)
+															  
+															  In call.S:  CALL(sys_noargs)
+															     	        CALL(sys_onearg)
+-------------------------------------------------------------------------------------
+9.	Linux ArxosPi 4.4.9-bookerv2 #3 SMP PREEMPT Sun Mar 4 22:17:22 CST 2018 armv71
+	GNU/Linux
+-------------------------------------------------------------------------------------
+10.	[1646.579589] Someone invoked the sys_noargs system callSomeone invoked the
+	sys_onearg system call with val: 2415

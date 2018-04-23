@@ -1,0 +1,334 @@
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/basic/bin2c
+  HOSTCC  scripts/kconfig/conf.o
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+scripts/kconfig/conf  --silentoldconfig Kconfig
+  CHK     include/config/kernel.release
+  CHK     include/generated/uapi/linux/version.h
+  UPD     include/config/kernel.release
+  CHK     include/generated/utsrelease.h
+  UPD     include/generated/utsrelease.h
+  HOSTCC  scripts/dtc/dtc.o
+  HOSTCC  scripts/genksyms/genksyms.o
+  HOSTCC  scripts/dtc/flattree.o
+  CC      scripts/mod/empty.o
+  HOSTCC  scripts/kallsyms
+  HOSTCC  scripts/mod/mk_elfconfig
+  HOSTCC  scripts/genksyms/parse.tab.o
+  HOSTCC  scripts/dtc/fstree.o
+  CC      scripts/mod/devicetable-offsets.s
+  GEN     scripts/mod/devicetable-offsets.h
+  MKELF   scripts/mod/elfconfig.h
+  HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/pnmtologo
+  HOSTCC  scripts/mod/file2alias.o
+  HOSTCC  scripts/mod/sumversion.o
+  HOSTCC  scripts/genksyms/lex.lex.o
+  HOSTCC  scripts/conmakehash
+  HOSTCC  scripts/recordmcount
+  HOSTCC  scripts/dtc/data.o
+  HOSTCC  scripts/dtc/livetree.o
+  HOSTCC  scripts/dtc/treesource.o
+  HOSTCC  scripts/sortextable
+  HOSTCC  scripts/dtc/srcpos.o
+  HOSTCC  scripts/dtc/checks.o
+  HOSTCC  scripts/dtc/util.o
+  HOSTLD  scripts/genksyms/genksyms
+  HOSTCC  scripts/dtc/dtc-lexer.lex.o
+  HOSTCC  scripts/dtc/dtc-parser.tab.o
+  HOSTLD  scripts/mod/modpost
+make[1]: `include/generated/mach-types.h' is up to date.
+  CHK     include/generated/timeconst.h
+  CC      kernel/bounds.s
+  CHK     include/generated/bounds.h
+  CC      arch/arm/kernel/asm-offsets.s
+  HOSTLD  scripts/dtc/dtc
+  CHK     include/generated/asm-offsets.h
+  CALL    scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+  CC      init/main.o
+  CC      init/do_mounts.o
+  CC      init/do_mounts_rd.o
+  CC      init/do_mounts_initrd.o
+  CC      init/initramfs.o
+  HOSTCC  usr/gen_init_cpio
+  CC      arch/arm/vfp/vfpmodule.o
+  CC      init/calibrate.o
+In file included from init/initramfs.c:19:0:
+include/linux/syscalls.h:1:1: warning: data definition has no type or storage class [enabled by default]
+ B1;2802;0c/*
+ ^
+include/linux/syscalls.h:1:1: error: type defaults to ‘int’ in declaration of ‘B1’ [-Werror=implicit-int]
+include/linux/syscalls.h:1:4: error: expected identifier or ‘(’ before numeric constant
+ B1;2802;0c/*
+    ^
+include/linux/syscalls.h:1:9: error: invalid suffix "c" on integer constant
+ B1;2802;0c/*
+         ^
+include/linux/syscalls.h:1:9: error: expected identifier or ‘(’ before numeric constant
+In file included from init/main.c:18:0:
+include/linux/syscalls.h:1:1: warning: data definition has no type or storage class [enabled by default]
+ B1;2802;0c/*
+ ^
+include/linux/syscalls.h:1:1: error: type defaults to ‘int’ in declaration of ‘B1’ [-Werror=implicit-int]
+include/linux/syscalls.h:1:4: error: expected identifier or ‘(’ before numeric constant
+ B1;2802;0c/*
+    ^
+include/linux/syscalls.h:1:9: error: invalid suffix "c" on integer constant
+ B1;2802;0c/*
+         ^
+include/linux/syscalls.h:1:9: error: expected identifier or ‘(’ before numeric constant
+In file included from init/initramfs.c:19:0:
+include/linux/syscalls.h:630:12: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     struct epoll_event __user *event);
+            ^
+include/linux/syscalls.h:630:12: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+include/linux/syscalls.h:632:5: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     int maxevents, int timeout);
+     ^
+include/linux/syscalls.h:636:5: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     size_t sigsetsize);
+     ^
+In file included from init/do_mounts.h:4:0,
+                 from init/do_mounts_rd.c:21:
+include/linux/syscalls.h:1:1: warning: data definition has no type or storage class [enabled by default]
+ B1;2802;0c/*
+ ^
+include/linux/syscalls.h:1:1: error: type defaults to ‘int’ in declaration of ‘B1’ [-Werror=implicit-int]
+include/linux/syscalls.h:1:4: error: expected identifier or ‘(’ before numeric constant
+ B1;2802;0c/*
+    ^
+include/linux/syscalls.h:1:9: error: invalid suffix "c" on integer constant
+ B1;2802;0c/*
+         ^
+include/linux/syscalls.h:1:9: error: expected identifier or ‘(’ before numeric constant
+In file included from init/main.c:18:0:
+include/linux/syscalls.h:630:12: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     struct epoll_event __user *event);
+            ^
+include/linux/syscalls.h:630:12: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+include/linux/syscalls.h:632:5: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     int maxevents, int timeout);
+     ^
+include/linux/syscalls.h:636:5: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     size_t sigsetsize);
+     ^
+cc1: some warnings being treated as errors
+make[1]: *** [init/initramfs.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+  AS      arch/arm/vfp/entry.o
+In file included from init/do_mounts.h:4:0,
+                 from init/do_mounts_initrd.c:21:
+include/linux/syscalls.h:1:1: warning: data definition has no type or storage class [enabled by default]
+ B1;2802;0c/*
+ ^
+include/linux/syscalls.h:1:1: error: type defaults to ‘int’ in declaration of ‘B1’ [-Werror=implicit-int]
+include/linux/syscalls.h:1:4: error: expected identifier or ‘(’ before numeric constant
+ B1;2802;0c/*
+    ^
+include/linux/syscalls.h:1:9: error: invalid suffix "c" on integer constant
+ B1;2802;0c/*
+         ^
+include/linux/syscalls.h:1:9: error: expected identifier or ‘(’ before numeric constant
+In file included from init/do_mounts.h:4:0,
+                 from init/do_mounts_rd.c:21:
+include/linux/syscalls.h:630:12: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     struct epoll_event __user *event);
+            ^
+include/linux/syscalls.h:630:12: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+include/linux/syscalls.h:632:5: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     int maxevents, int timeout);
+     ^
+include/linux/syscalls.h:636:5: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     size_t sigsetsize);
+     ^
+  GEN     usr/initramfs_data.cpio.gz
+cc1: some warnings being treated as errors
+In file included from init/do_mounts.h:4:0,
+                 from init/do_mounts_initrd.c:21:
+include/linux/syscalls.h:630:12: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     struct epoll_event __user *event);
+            ^
+include/linux/syscalls.h:630:12: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+include/linux/syscalls.h:632:5: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     int maxevents, int timeout);
+     ^
+include/linux/syscalls.h:636:5: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     size_t sigsetsize);
+     ^
+make[1]: *** [init/do_mounts_rd.o] Error 1
+cc1: some warnings being treated as errors
+make[1]: *** [init/do_mounts_initrd.o] Error 1
+  AS      arch/arm/vfp/vfphw.o
+  CC      arch/arm/vfp/vfpsingle.o
+  CC      arch/arm/kvm/../../../virt/kvm/kvm_main.o
+  AS      usr/initramfs_data.o
+  CC      arch/arm/vfp/vfpdouble.o
+cc1: some warnings being treated as errors
+  LD      usr/built-in.o
+make[1]: *** [init/main.o] Error 1
+  CC      arch/arm/kvm/../../../virt/kvm/coalesced_mmio.o
+  CC      arch/arm/kvm/../../../virt/kvm/eventfd.o
+In file included from init/do_mounts.h:4:0,
+                 from init/do_mounts.c:36:
+include/linux/syscalls.h:1:1: warning: data definition has no type or storage class [enabled by default]
+ B1;2802;0c/*
+ ^
+include/linux/syscalls.h:1:1: error: type defaults to ‘int’ in declaration of ‘B1’ [-Werror=implicit-int]
+include/linux/syscalls.h:1:4: error: expected identifier or ‘(’ before numeric constant
+ B1;2802;0c/*
+    ^
+include/linux/syscalls.h:1:9: error: invalid suffix "c" on integer constant
+ B1;2802;0c/*
+         ^
+include/linux/syscalls.h:1:9: error: expected identifier or ‘(’ before numeric constant
+In file included from init/do_mounts.h:4:0,
+                 from init/do_mounts.c:36:
+include/linux/syscalls.h:630:12: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     struct epoll_event __user *event);
+            ^
+include/linux/syscalls.h:630:12: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+include/linux/syscalls.h:632:5: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     int maxevents, int timeout);
+     ^
+include/linux/syscalls.h:636:5: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     size_t sigsetsize);
+     ^
+cc1: some warnings being treated as errors
+  CC      arch/arm/kernel/elf.o
+make[1]: *** [init/do_mounts.o] Error 1
+make: *** [init] Error 2
+make: *** Waiting for unfinished jobs....
+  CC      arch/arm/kvm/../../../virt/kvm/vfio.o
+  LDS     arch/arm/vdso/vdso.lds
+  CC      arch/arm/vdso/vgettimeofday.o
+In file included from arch/arm/kvm/../../../virt/kvm/eventfd.c:28:0:
+include/linux/syscalls.h:1:1: warning: data definition has no type or storage class [enabled by default]
+ B1;2802;0c/*
+ ^
+include/linux/syscalls.h:1:1: error: type defaults to ‘int’ in declaration of ‘B1’ [-Werror=implicit-int]
+include/linux/syscalls.h:1:4: error: expected identifier or ‘(’ before numeric constant
+ B1;2802;0c/*
+    ^
+include/linux/syscalls.h:1:9: error: invalid suffix "c" on integer constant
+ B1;2802;0c/*
+         ^
+include/linux/syscalls.h:1:9: error: expected identifier or ‘(’ before numeric constant
+In file included from arch/arm/kvm/../../../virt/kvm/eventfd.c:28:0:
+include/linux/syscalls.h:630:12: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     struct epoll_event __user *event);
+            ^
+include/linux/syscalls.h:630:12: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+include/linux/syscalls.h:632:5: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     int maxevents, int timeout);
+     ^
+include/linux/syscalls.h:636:5: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     size_t sigsetsize);
+     ^
+cc1: some warnings being treated as errors
+make[1]: *** [arch/arm/kvm/../../../virt/kvm/eventfd.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+  AS      arch/arm/vdso/datapage.o
+  HOSTCC  arch/arm/vdso/vdsomunge
+  AS      arch/arm/kernel/entry-common.o
+  VDSO    arch/arm/vdso/vdso.so.raw
+  CC      arch/arm/kernel/irq.o
+  CC      arch/arm/kernel/opcodes.o
+  CC      arch/arm/kernel/process.o
+  CC      arch/arm/kernel/ptrace.o
+  MUNGE   arch/arm/vdso/vdso.so.dbg
+  CC      arch/arm/kernel/reboot.o
+  LD      arch/arm/vfp/vfp.o
+  LD      arch/arm/vfp/built-in.o
+  CC      arch/arm/kernel/return_address.o
+  OBJCOPY arch/arm/vdso/vdso.so
+  CC      arch/arm/kernel/setup.o
+  AS      arch/arm/vdso/vdso.o
+  LD      arch/arm/vdso/built-in.o
+  CC      arch/arm/kernel/signal.o
+  AS      arch/arm/kernel/sigreturn_codes.o
+  CC      arch/arm/kernel/stacktrace.o
+  CC      arch/arm/kernel/sys_arm.o
+  CC      arch/arm/kernel/time.o
+  CC      arch/arm/kernel/traps.o
+  CC      arch/arm/kernel/sys_noargs.o
+In file included from arch/arm/kernel/sys_arm.c:23:0:
+include/linux/syscalls.h:1:1: warning: data definition has no type or storage class [enabled by default]
+ B1;2802;0c/*
+ ^
+include/linux/syscalls.h:1:1: error: type defaults to ‘int’ in declaration of ‘B1’ [-Werror=implicit-int]
+include/linux/syscalls.h:1:4: error: expected identifier or ‘(’ before numeric constant
+ B1;2802;0c/*
+    ^
+  CC      arch/arm/kernel/sys_onearg.o
+include/linux/syscalls.h:1:9: error: invalid suffix "c" on integer constant
+ B1;2802;0c/*
+         ^
+include/linux/syscalls.h:1:9: error: expected identifier or ‘(’ before numeric constant
+In file included from arch/arm/kernel/sys_arm.c:23:0:
+include/linux/syscalls.h:630:12: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     struct epoll_event __user *event);
+            ^
+include/linux/syscalls.h:630:12: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+include/linux/syscalls.h:632:5: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     int maxevents, int timeout);
+     ^
+include/linux/syscalls.h:636:5: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     size_t sigsetsize);
+     ^
+cc1: some warnings being treated as errors
+In file included from arch/arm/kernel/sys_noargs.c:9:0:
+include/linux/syscalls.h:1:1: warning: data definition has no type or storage class [enabled by default]
+ B1;2802;0c/*
+ ^
+include/linux/syscalls.h:1:1: error: type defaults to ‘int’ in declaration of ‘B1’ [-Werror=implicit-int]
+include/linux/syscalls.h:1:4: error: expected identifier or ‘(’ before numeric constant
+ B1;2802;0c/*
+    ^
+include/linux/syscalls.h:1:9: error: invalid suffix "c" on integer constant
+ B1;2802;0c/*
+         ^
+include/linux/syscalls.h:1:9: error: expected identifier or ‘(’ before numeric constant
+make[1]: *** [arch/arm/kernel/sys_arm.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+In file included from arch/arm/kernel/sys_onearg.c:9:0:
+include/linux/syscalls.h:1:1: warning: data definition has no type or storage class [enabled by default]
+ B1;2802;0c/*
+ ^
+include/linux/syscalls.h:1:1: error: type defaults to ‘int’ in declaration of ‘B1’ [-Werror=implicit-int]
+include/linux/syscalls.h:1:4: error: expected identifier or ‘(’ before numeric constant
+ B1;2802;0c/*
+    ^
+include/linux/syscalls.h:1:9: error: invalid suffix "c" on integer constant
+ B1;2802;0c/*
+         ^
+include/linux/syscalls.h:1:9: error: expected identifier or ‘(’ before numeric constant
+In file included from arch/arm/kernel/sys_noargs.c:9:0:
+include/linux/syscalls.h:630:12: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     struct epoll_event __user *event);
+            ^
+include/linux/syscalls.h:630:12: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+include/linux/syscalls.h:632:5: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     int maxevents, int timeout);
+     ^
+include/linux/syscalls.h:636:5: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     size_t sigsetsize);
+     ^
+cc1: some warnings being treated as errors
+make[1]: *** [arch/arm/kernel/sys_noargs.o] Error 1
+In file included from arch/arm/kernel/sys_onearg.c:9:0:
+include/linux/syscalls.h:630:12: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     struct epoll_event __user *event);
+            ^
+include/linux/syscalls.h:630:12: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+include/linux/syscalls.h:632:5: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     int maxevents, int timeout);
+     ^
+include/linux/syscalls.h:636:5: warning: ‘struct epoll_event’ declared inside parameter list [enabled by default]
+     size_t sigsetsize);
+     ^
+cc1: some warnings being treated as errors
+make[1]: *** [arch/arm/kernel/sys_onearg.o] Error 1
+make: *** [arch/arm/kernel] Error 2
+make: *** [arch/arm/kvm] Error 2

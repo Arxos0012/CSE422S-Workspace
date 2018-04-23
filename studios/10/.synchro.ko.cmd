@@ -1,0 +1,1 @@
+cmd_/tmp/compile/booker.oronde/studios/10/synchro.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /tmp/compile/booker.oronde/studios/10/synchro.ko /tmp/compile/booker.oronde/studios/10/synchro.o /tmp/compile/booker.oronde/studios/10/synchro.mod.o

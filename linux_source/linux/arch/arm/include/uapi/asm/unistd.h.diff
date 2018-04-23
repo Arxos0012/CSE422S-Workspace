@@ -1,0 +1,12 @@
+--- unistd.h	2018-03-04 20:29:02.769997923 -0600
++++ unistd.h.03042018	2018-03-04 20:27:59.256488886 -0600
+@@ -417,9 +417,6 @@
+ #define __NR_userfaultfd		(__NR_SYSCALL_BASE+388)
+ #define __NR_membarrier			(__NR_SYSCALL_BASE+389)
+ #define __NR_mlock2			(__NR_SYSCALL_BASE+390)
+-#define __NR_noargs			(__NR_SYSCALL_BASE+391)
+-#define __NR_onearg			(__NR_SYSCALL_BASE+392)
+-
+ 
+ /*
+  * The following SWIs are ARM private.

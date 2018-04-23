@@ -1,4 +1,4 @@
-B1;2802;0c/*
+/*
  * syscalls.h - Linux syscall interfaces (non-arch-specific)
  *
  * Copyright (c) 2004 Randy Dunlap
@@ -890,6 +890,6 @@ asmlinkage long sys_membarrier(int cmd, int flags);
 asmlinkage long sys_mlock2(unsigned long start, size_t len, int flags);
 
 asmlinkage long sys_noargs(void);
-asmlinkage long sys_onearg(int new_num);
+asmlinkage long sys_onearg(int val);
 
 #endif

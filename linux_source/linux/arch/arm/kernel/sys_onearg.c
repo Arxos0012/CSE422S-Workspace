@@ -9,10 +9,10 @@
 #include <linux/syscalls.h>
 
 //Define a system call implementation that takes no arguments
-SYSCALL_DEFINE1( onearg, int, new_num ){
+SYSCALL_DEFINE1( onearg, int, val ){
 
   // print out a simple message indicating the function was called, and return SUCCESS
-  printk("Someone invoked the sys_onearg system call with value: %d", new_num);
+  printk("Someone invoked the sys_onearg system call with val: %d\n", val);
   return 0;  
 }
 

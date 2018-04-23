@@ -1,0 +1,1 @@
+cmd_/tmp/compile/booker.oronde/lab2/primes-atomic.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /tmp/compile/booker.oronde/lab2/primes-atomic.ko /tmp/compile/booker.oronde/lab2/primes-atomic.o /tmp/compile/booker.oronde/lab2/primes-atomic.mod.o
